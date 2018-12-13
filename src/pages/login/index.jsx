@@ -9,21 +9,35 @@ import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import TextField from '@material-ui/core/TextField'
 import { login } from '../../store/reducers/auth/actions'
+import {
+  Redirect,
+} from 'react-router-dom'
 
 class LoginPageContainer extends Component {
   constructor (props) {
     super(props)
   }
   doClick = () => {
-    this.props.login({ username:'admin', password: 'admin' })
-    console.log(this.props.auth)
-    // this.props.login({ username: 'admin', password: 'test' })
-    // const { history } = this.props
-    // history.push("/Dashboard")
-    // console.log( this.props)
-    // here action redux
+    this.props.login({ 
+      username:'admin', 
+      password: 'admin' 
+    })
+  }
+  componentDidUpdate () {
+    const { auth } = this.props
+    if (auth.error) {
+      alert('creds invalidas')
+    }
   }
   render () {
+    const { auth } = this.props
+
+    if (auth.isLoggedIn) {
+      return (
+        <Redirect to={'/Dashboard'}/>
+      )
+    }
+
     return React.Children.map(this.props.children, (child) => {
       return React.cloneElement(child, {
         ...this.props,

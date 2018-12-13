@@ -4,7 +4,8 @@ import {
   LOGIN,
 } from './actionTypes'
 import {
-  loginFinished
+  loginFinished,
+  loginError
 } from '../auth/actions'
 import { mergeMap, map, tap, finalize } from 'rxjs/operators'
 import { ofType } from 'redux-observable'
@@ -13,10 +14,10 @@ import { API_URL } from '../../../config'
 
 const fetchUserEpic = action$ => action$.pipe(
   ofType(LOGIN),
-  mergeMap(_ =>
-    ajax.getJSON(`${API_URL}/auth`).pipe(
+  mergeMap( ({ payload }) =>
+    ajax.getJSON(`${API_URL}/auth?username=${payload.username}&password=${payload.password}`).pipe(
       map(response => {
-        return loginFinished(response)
+        return (response.length > 0)? loginFinished(response) : loginError()
       })
     )
   )
