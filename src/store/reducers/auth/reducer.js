@@ -14,17 +14,13 @@ function startLogin (state) {
   return {
     ...state,
     loading: true,
+    isLoggedIn: false,
   }
 }
 
-function finishLogin (state, action) {
-  let error = false
-  if (action.error) {
-    error = action.payload.data
-  }
+function finishLogin (state) {
   return {
     ...state,
-    error,
     loading: false,
     isLoggedIn: true,
   }

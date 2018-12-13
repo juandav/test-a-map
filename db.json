@@ -33,5 +33,8 @@
   ],
   "group": [
     { "id": 200, "countryId": 7, "populationId": 100 }
+  ],
+  "auth": [
+    { "id": 10001, "username": "admin", "password": "admin" }
   ]
 }

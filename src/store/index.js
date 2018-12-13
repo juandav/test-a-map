@@ -5,7 +5,6 @@ import {
 import { routerMiddleware } from 'connected-react-router'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import createHistory from 'history/createHashHistory'
-import thunk from 'redux-thunk'
 import { createEpicMiddleware } from 'redux-observable'
 import { createRootReducer, createRootEpic }  from './reducers'
 
@@ -15,8 +14,7 @@ function CreateStore () {
   try {
     const history = createHistory()
     const middlewares = [
-      routerMiddleware(history), 
-      thunk, 
+      routerMiddleware(history),
       epicMiddleware
     ]
 

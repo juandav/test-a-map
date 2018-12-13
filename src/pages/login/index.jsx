@@ -15,9 +15,11 @@ class LoginPageContainer extends Component {
     super(props)
   }
   doClick = () => {
-    this.props.login({ username: 'admin', password: 'test' })
-    //const { history } = this.props
-    //history.push("/Dashboard")
+    this.props.login({ username:'admin', password: 'admin' })
+    console.log(this.props.auth)
+    // this.props.login({ username: 'admin', password: 'test' })
+    // const { history } = this.props
+    // history.push("/Dashboard")
     // console.log( this.props)
     // here action redux
   }
@@ -82,8 +84,8 @@ const Form = ({ doClick, classes }) => (
 )
 
 
-const LoginStateContainer = connect( ({meta, auth}) => {
-  return { }
+const LoginStateContainer = connect( ({ auth }) => {
+  return { auth }
 }, (dispath) => {
   return {
     login: payload => dispath(login(payload))
