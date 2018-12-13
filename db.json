@@ -1,0 +1,37 @@
+{
+  "locations": [
+    { "id": 1, "name": "AFRICA" },
+    { "id": 2, "name": "MEDIO ORIENTE" },
+    { "id": 3, "name": "EUROPA" },
+    { "id": 4, "name": "ASIA" },
+    { "id": 5, "name": "OCEANIA" },
+    { "id": 6, "name": "AMERICA" }
+  ],
+  "countries": [ 
+    { "id": 7, "name": "CONGO", "locationId": 1 },
+    { "id": 8, "name": "NIGERIA", "locationId": 1 },
+    { "id": 9, "name": "TANZANIA", "locationId": 1 },
+    { "id": 10, "name": "CAMERUN", "locationId": 1 },
+    { "id": 11, "name": "KENYA", "locationId": 1 },
+    { "id": 12, "name": "SOMALIA", "locationId": 1 },
+    { "id": 13, "name": "ETIOPIA", "locationId": 1 },
+    { "id": 14, "name": "ISRAEL", "locationId": 2 },
+    { "id": 15, "name": "PALESTINA", "locationId": 2 },
+    { "id": 16, "name": "YEMEN", "locationId": 2 },
+    { "id": 17, "name": "SIRIA", "locationId": 2 },
+    { "id": 18, "name": "LIBANO", "locationId": 2 },
+    { "id": 19, "name": "ROMA", "locationId": 3 },
+    { "id": 20, "name": "ALEMANIA", "locationId": 3 },
+    { "id": 21, "name": "HUNGRIA", "locationId": 3 },
+    { "id": 22, "name": "POLONIA", "locationId": 3 },
+    { "id": 23, "name": "RUSIA", "locationId": 3 }
+  ],
+  "populations": [
+    { "id": 100, "name":"BIAKA" },
+    { "id": 101, "name":"other1" },
+    { "id": 102, "name":"other2" } 
+  ],
+  "group": [
+    { "id": 200, "countryId": 7, "populationId": 100 }
+  ]
+}

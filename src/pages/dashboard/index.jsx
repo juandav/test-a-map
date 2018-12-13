@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
+import Map from '../../components/map'
 
 class Dashboard extends Component {
   render () {
-    return (<h1>Dashboard</h1>)
+    return (<Map />)
   }
 }
 

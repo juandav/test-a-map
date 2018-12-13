@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { withStyles } from '@material-ui/core/styles'
 import Card from '@material-ui/core/Card'
@@ -7,14 +8,16 @@ import CardContent from '@material-ui/core/CardContent'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import TextField from '@material-ui/core/TextField'
+import { login } from '../../store/reducers/auth/actions'
 
 class LoginPageContainer extends Component {
   constructor (props) {
     super(props)
   }
   doClick = () => {
-    // const { history } = this.props
-    // history.push("/Dashboard")
+    this.props.login({ username: 'admin', password: 'test' })
+    //const { history } = this.props
+    //history.push("/Dashboard")
     // console.log( this.props)
     // here action redux
   }
@@ -78,14 +81,23 @@ const Form = ({ doClick, classes }) => (
   </Card>
 )
 
+
+const LoginStateContainer = connect( ({meta, auth}) => {
+  return { }
+}, (dispath) => {
+  return {
+    login: payload => dispath(login(payload))
+  }
+})(LoginPageContainer)
+
 function LoginUIPage (props) {
   const { classes } = props
   return (
     <div className={classes.layout}>
       <div className={classes.centeredCardContainer}>
-        <LoginPageContainer {...props} >
+        <LoginStateContainer {...props} >
           <Form />
-        </LoginPageContainer>
+        </LoginStateContainer>
       </div>
     </div>
   )
