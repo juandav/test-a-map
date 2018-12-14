@@ -34,8 +34,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "json-server --watch db.json",
-    "__test__": "node ./__test__/server.js",
-    "dev": "concurrently \"npm run server\" \"npm run start\""
+    "dev": "concurrently \"npm run server\" \"npm run start\"",
+    "__test__": "node ./__test__/index.jsx"
   },
   "eslintConfig": {
     "extends": "react-app"
