@@ -1,5 +1,4 @@
 import { combineEpics } from 'redux-observable'
-
 import { 
   LOGIN,
 } from './actionTypes'
@@ -7,7 +6,7 @@ import {
   loginFinished,
   loginError
 } from '../auth/actions'
-import { mergeMap, map, tap, finalize } from 'rxjs/operators'
+import { mergeMap, map, } from 'rxjs/operators'
 import { ofType } from 'redux-observable'
 import { ajax } from 'rxjs/ajax'
 import { API_URL } from '../../../config'
