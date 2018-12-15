@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: left;
   border-radius: 4px;
+  margin-bottom: 4px !important;
 }
 .item.first {
   box-shadow: 5px 1px 1px rgb(26, 71, 71);

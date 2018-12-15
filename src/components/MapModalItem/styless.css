@@ -1,0 +1,15 @@
+.scrollList-raza {
+  display: flex;
+  width: 230px;
+  border-top: 1px solid #aaaaaa;
+  border-left: 8px solid #aaaaaa;
+  border-bottom: 1px solid #aaaaaa;
+  box-shadow: 1px 2px 5px #aaaaaa;
+  margin-bottom: 6px !important;
+}
+.scrollList-raza-description {
+  margin-left: 15px;
+}
+.scrollList-raza-value {
+  margin-left: 80px;
+}

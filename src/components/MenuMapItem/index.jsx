@@ -11,7 +11,7 @@ const styless = {
 }
 
 function MenuMapItem (props) {
-  const { itemColor, iconPath, title, value } = props
+  const { itemColor, iconPath, title, value, doClick } = props
   return (
     <div className={`item ${itemColor}`}>
       <img src={iconPath} className="item-map" alt="OM" width="80" height="80" />
@@ -19,7 +19,7 @@ function MenuMapItem (props) {
       <div className="item-description">
           <p style={styless.p}>Region Geografica</p>
           <p style={styless.p}> <b>{title}</b> </p>
-          <a href="#">Detalles</a>
+          <a href="#" onClick={(e) => { e.preventDefault(); return doClick(itemColor); }}>Detalles</a>
       </div>
       <div className={`circle ${itemColor}`}>{value}</div>
     </div>

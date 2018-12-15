@@ -1,0 +1,16 @@
+.frontMenu {
+  position: absolute;
+  top: 90px;
+  left: 114px;
+  width: 250px;
+  height: 395px;
+  background-color: white;
+  padding: 15px;
+  box-shadow: 1px 2px 5px #aaaaaa;
+  visibility: hidden;
+  text-align: left;
+}
+.scrollList {
+  height:380px; 
+  overflow-y: auto;
+}
