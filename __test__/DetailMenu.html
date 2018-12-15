@@ -27,6 +27,7 @@
             padding: 15px;
             box-shadow: 1px 2px 5px #aaaaaa;
             color: rgb(160, 160, 160);
+            position: relative;
         }
         .content-title {
             text-align: center;
@@ -109,10 +110,40 @@
         .circle.fifth {
             background-color:  rgb(2, 117, 108);
         }
+        .frontMenu {
+            position: absolute;
+            top: 100px;
+            left: 114px;
+            width: 250px;
+            height: 430px;
+            background-color: white;
+            padding: 15px;
+            box-shadow: 1px 2px 5px #aaaaaa;
+            visibility: hidden;
+        }
+        .scrollList {
+            height:380px; 
+            overflow-y: auto;
+        }
+        .scrollList-raza {
+            display: flex;
+            width: 230px;
+            border-top: 1px solid #aaaaaa;
+            border-left: 8px solid #aaaaaa;
+            border-bottom: 1px solid #aaaaaa;
+            box-shadow: 1px 2px 5px #aaaaaa;
+        }
+        .scrollList-raza-description {
+            margin-left: 15px;
+        }
+        .scrollList-raza-value {
+           margin-left: 80px;
+        }
     </style>
     <script>
         var globalItems = ["first", "second", "third", "fourth", "fifth"]
         document.addEventListener("DOMContentLoaded", function(event) {
+            var $subMenu = document.getElementsByClassName('frontMenu')
             var $aArray = document.getElementsByTagName("a")
             for (index in $aArray) {
                 if(!isNaN(index)) {
@@ -120,9 +151,11 @@
                         var diffItems = document.querySelectorAll(`.item:not(.${globalItems[this.index]})`)
                         for (i in diffItems) {
                             if(!isNaN(i)) { 
-                                diffItems[i].style.width = "100px"
+                                diffItems[i].style.width = "90px"
+                                diffItems[i].children[1].hidden = true
                                 diffItems[i].children[2].hidden = true
                                 diffItems[i].children[3].hidden = true
+                                $subMenu[0].style.visibility = "visible"
                             }
                         }
                     }.bind({ index })
@@ -188,6 +221,23 @@
                 <a href="#">Detalles</a>
             </div>
             <div class="circle fifth">20%</div>
+        </div>
+
+        <div class="frontMenu">
+            <p style="margin:-2.5% 0;">Region Cartografica</p>
+            <p style="margin:1% 0;"><b>America</b></p>
+            <hr />
+            <div class="scrollList">
+                <div class="scrollList-raza">
+                    <p class="scrollList-raza-description"> Maya, Yucatan  </p>
+                    <p class="scrollList-raza-value"> 7.5% </p>
+                </div>
+                <br />
+                <div class="scrollList-raza">
+                    <p class="scrollList-raza-description"> Maya, Yucatan  </p>
+                    <p class="scrollList-raza-value"> 7.5% </p>
+                </div>
+            </div>
         </div>
     </div>
 </body>
