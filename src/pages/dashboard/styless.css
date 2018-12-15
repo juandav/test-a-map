@@ -1,14 +1,14 @@
 .container {
   display: grid;
-  grid-template-columns: 10px 340px 50% 100px 100px;
-  grid-template-rows: 2% 8% 30% 30% 5% 15%;
+  grid-template-columns: 10px 340px 650px 100px 100px;
+  grid-template-rows: 2% 10% 30% 30% 5% 15%;
   grid-gap: 10px;
   height: 100vh;
 }
 .header {
-  padding: 10px;
-  grid-column: 1 / -1;
+  grid-column: 2 / -1;
   grid-row: 2 / 3;
+  display: flex;
 }
 .menu {
   padding: 10px;
@@ -21,6 +21,7 @@
   grid-row: 3 / 4;
   text-align: left;
   margin-left: 322px;
+  margin-bottom: 300px;
 }
 .map {
   /* background: lightblue;*/
@@ -28,4 +29,7 @@
   /*border: 1px solid red;*/
   grid-column: 3 / -1;
   grid-row: 4 / -1;
+}
+.logout {
+  grid-column: 5 / 6;
 }

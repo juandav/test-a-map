@@ -1,9 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { withStyles } from '@material-ui/core/styles'
+import Profile from '../../components/Profile'
 import MenuMap from '../../components/MenuMap'
 import Info from '../../components/Info'
 import Map from '../../components/map'
+import Button from '@material-ui/core/Button'
 
 import './styless.css'
 import "react-step-progress-bar/styles.css"
@@ -25,10 +27,21 @@ const styles = theme => ({
 function Dashboard(props) {
   return (
    <div className="container">
-      <div className="header"> <h1>HEADER</h1></div>
-      <div className="menu"> <MenuMap /> </div>
-      <div className="info"> <Info /> </div>
-      <article className="map"> <Map /> </article>
+      <Button variant="contained" color="primary" className="logout">
+        Logout
+      </Button>
+      <div className="header"> 
+        <Profile /> 
+      </div>
+      <div className="menu">
+        <MenuMap /> 
+      </div>
+      <div className="info">
+        <Info />
+      </div>
+      <div className="map"> 
+        <Map /> 
+      </div>
     </div>
   )
 }
