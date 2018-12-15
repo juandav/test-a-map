@@ -5,24 +5,20 @@
   grid-column-gap: 10px;
   grid-row-gap: 25px;
 }
-
 .map {
   grid-column-start: 5;
   grid-row-start: 5;
 }
-
 .progress {
   grid-column-start: 5;
   grid-row-start: 4;
   grid-column-end: 6;
 }
-
 .info {
   grid-column-start: 5;
   grid-row-start: 2;
   text-align: left;
 }
-
 .menu {
   grid-column-start: 4;
   grid-row-start: 2;

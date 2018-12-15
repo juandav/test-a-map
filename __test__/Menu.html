@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Menu</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font: 14px/16px Roboto,sans-serif;
+            color: #666;
+            background-color:#fafafa!important;
+            height: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+                "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+                sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            padding: 30px;
+        }
+        .content {
+            border: 0ch;
+            background-color: white;
+            width: 310px;
+            padding: 15px;
+            box-shadow: 1px 2px 5px #aaaaaa;
+            color: rgb(160, 160, 160);
+        }
+        .content-title {
+            text-align: center;
+        }
+        .item {
+            width: 300px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: left;
+            border-radius: 4px;
+        }
+        .item.first {
+            box-shadow: 5px 1px 1px rgb(26, 71, 71);
+            border-top: 1px solid rgb(26, 71, 71);
+            border-left: 1px solid rgb(26, 71, 71);
+            border-bottom: 1px solid rgb(26, 71, 71);
+            color: rgb(26, 71, 71);
+        }
+        .item.second {
+            box-shadow: 5px 1px 1px rgb(6, 116, 20);
+            border-top: 1px solid rgb(6, 116, 20);
+            border-left: 1px solid rgb(6, 116, 20);
+            border-bottom: 1px solid rgb(6, 116, 20);
+            color: rgb(6, 116, 20);
+        }
+        .item.third {
+            box-shadow: 5px 1px 1px rgb(240, 152, 20);
+            border-top: 1px solid rgb(240, 152, 20);
+            border-left: 1px solid rgb(240, 152, 20);
+            border-bottom: 1px solid rgb(240, 152, 20);
+            color: rgb(240, 152, 20);
+        }
+        .item.fourth {
+            box-shadow: 5px 1px 1px rgb(160, 28, 4);
+            border-top: 1px solid rgb(160, 28, 4);
+            border-left: 1px solid rgb(160, 28, 4);
+            border-bottom: 1px solid rgb(160, 28, 4);
+            color: rgb(160, 28, 4);
+        }
+        .item.fifth {
+            box-shadow: 5px 1px 1px rgb(2, 117, 108);
+            border-top: 1px solid rgb(2, 117, 108);
+            border-left: 1px solid rgb(2, 117, 108);
+            border-bottom: 1px solid rgb(2, 117, 108);
+            color: rgb(2, 117, 108);
+        }
+        .item-map {
+            align-self: auto;
+        }
+        div.vertical-line{
+            width: 0px;
+            height: 100%;
+            float: left; 
+            border: 1px inset; /* This is default border style for <hr> tag */
+            margin: 10px;
+        }
+        .circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            color: antiquewhite;
+            font-size: 15px;
+            text-align: center;
+            line-height: 50px;
+            margin-left:30px
+        }
+        .circle.first {
+            background-color:  rgb(26, 71, 71);
+        }
+        .circle.second {
+            background-color:  rgb(6, 116, 20);
+        }
+        .circle.third {
+            background-color:  rgb(240, 152, 20);
+        }
+        .circle.fourth {
+            background-color:  rgb(160, 28, 4);
+        }
+        .circle.fifth {
+            background-color:  rgb(2, 117, 108);
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h4 class="content-title">Selecciona una región para detallar el porcentaje de tu composición ancestral.</h4>
+        <div class="item first">
+            <img src="../public/img/america.png" class="item-map" alt="AM" width="80" height="80" />
+            <div class="vertical-line" style="height: 60px;"></div>
+            <div class="item-description">
+                <P style="margin:-2.5% 0;">Region Geografica</P>
+                <p style="margin:-2.5% 0;"> <b>America</b> </p>
+                <a href="#">Detalles</a>
+            </div>
+            <div class="circle first">20%</div>
+        </div>
+        <br />
+        <div class="item second">
+            <img src="../public/img/europe.png" class="item-map" alt="EM" width="80" height="80" />
+            <div class="vertical-line" style="height: 60px;"></div>
+            <div class="item-description">
+                <P style="margin:-2.5% 0;">Region Geografica</P>
+                <p style="margin:-2.5% 0;"> <b>Europa</b> </p>
+                <a href="#">Detalles</a>
+            </div>
+            <div class="circle second">20%</div>
+        </div>
+        <br />
+        <div class="item third">
+            <img src="../public/img/africa.png" class="item-map" alt="AFM" width="80" height="80" />
+            <div class="vertical-line" style="height: 60px;"></div>
+            <div class="item-description">
+                <P style="margin:-2.5% 0;">Region Geografica</P>
+                <p style="margin:-2.5% 0;"> <b>Africa</b> </p>
+                <a href="#">Detalles</a>
+            </div>
+            <div class="circle third">20%</div>
+        </div>
+        <br />
+        <div class="item fourth">
+            <img src="../public/img/asia.png" class="item-map" alt="ASM" width="80" height="80" />
+            <div class="vertical-line" style="height: 60px;"></div>
+            <div class="item-description">
+                <P style="margin:-2.5% 0;">Region Geografica</P>
+                <p style="margin:-2.5% 0;"> <b>Asia</b> </p>
+                <a href="#">Detalles</a>
+            </div>
+            <div class="circle fourth">20%</div>
+        </div>
+        <br />
+        <div class="item fifth">
+            <img src="../public/img/australia(nomap).png" class="item-map" alt="OM" width="80" height="80" />
+            <div class="vertical-line" style="height: 60px;"></div>
+            <div class="item-description">
+                <P style="margin:-2.5% 0;">Region Geografica</P>
+                <p style="margin:-2.5% 0;"> <b>Oceania</b> </p>
+                <a href="#">Detalles</a>
+            </div>
+            <div class="circle fifth">20%</div>
+        </div>
+    </div>
+</body>
+</html>

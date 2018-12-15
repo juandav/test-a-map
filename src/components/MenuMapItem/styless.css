@@ -1,0 +1,82 @@
+.item {
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  border-radius: 4px;
+  margin-bottom: 4px !important;
+}
+.item.first {
+  box-shadow: 5px 1px 1px rgb(26, 71, 71);
+  border-top: 1px solid rgb(26, 71, 71);
+  border-left: 1px solid rgb(26, 71, 71);
+  border-bottom: 1px solid rgb(26, 71, 71);
+  color: rgb(26, 71, 71);
+}
+.item.second {
+  box-shadow: 5px 1px 1px rgb(6, 116, 20);
+  border-top: 1px solid rgb(6, 116, 20);
+  border-left: 1px solid rgb(6, 116, 20);
+  border-bottom: 1px solid rgb(6, 116, 20);
+  color: rgb(6, 116, 20);
+}
+.item.third {
+  box-shadow: 5px 1px 1px rgb(240, 152, 20);
+  border-top: 1px solid rgb(240, 152, 20);
+  border-left: 1px solid rgb(240, 152, 20);
+  border-bottom: 1px solid rgb(240, 152, 20);
+  color: rgb(240, 152, 20);
+}
+.item.fourth {
+  box-shadow: 5px 1px 1px rgb(160, 28, 4);
+  border-top: 1px solid rgb(160, 28, 4);
+  border-left: 1px solid rgb(160, 28, 4);
+  border-bottom: 1px solid rgb(160, 28, 4);
+  color: rgb(160, 28, 4);
+}
+.item.fifth {
+  box-shadow: 5px 1px 1px rgb(2, 117, 108);
+  border-top: 1px solid rgb(2, 117, 108);
+  border-left: 1px solid rgb(2, 117, 108);
+  border-bottom: 1px solid rgb(2, 117, 108);
+  color: rgb(2, 117, 108);
+}
+.item-map {
+  align-self: auto;
+}
+div.vertical-line{
+  width: 0px;
+  height: 100%;
+  float: left; 
+  border: 1px inset; /* This is default border style for <hr> tag */
+  margin: 10px;
+}
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: antiquewhite;
+  font-size: 15px;
+  text-align: center;
+  line-height: 50px;
+  margin-left:30px
+}
+.circle.first {
+  background-color:  rgb(26, 71, 71);
+}
+.circle.second {
+  background-color:  rgb(6, 116, 20);
+}
+.circle.third {
+  background-color:  rgb(240, 152, 20);
+}
+.circle.fourth {
+  background-color:  rgb(160, 28, 4);
+}
+.circle.fifth {
+  background-color:  rgb(2, 117, 108);
+}
+.item-description {
+  text-align: left;
+}
