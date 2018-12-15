@@ -24,10 +24,14 @@ const styles = theme => ({
   },
 })
 
+function doClick () {
+  alert('cerrar sesión')
+}
+
 function Dashboard(props) {
   return (
    <div className="container">
-      <Button variant="contained" color="primary" className="logout">
+      <Button variant="contained" color="primary" className="logout" onClick={() => doClick()}>
         Logout
       </Button>
       <div className="header"> 

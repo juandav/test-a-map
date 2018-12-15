@@ -1,9 +1,10 @@
 .container {
   display: grid;
-  grid-template-columns: 10px 340px 650px 100px 100px;
+  grid-template-columns: 2% 40% 50% 4% 4%;
   grid-template-rows: 2% 10% 30% 30% 5% 15%;
   grid-gap: 10px;
   height: 100vh;
+  width: 200vh;
 }
 .header {
   grid-column: 2 / -1;
