@@ -15,7 +15,7 @@ function Info () {
         sobre dónde vivieron tus ancestros y cuando.
       </p>
       <br/>
-      <div style={{marginLeft: "10px",}}>
+      <div style={{marginLeft: "10px", zIndex: -1, position: "absolute"}}>
         <ProgressBar
           percent={100}
           width={800}
