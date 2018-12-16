@@ -1,0 +1,10 @@
+{
+  "apps": [{
+    "name": "test_a_map",
+    "script": "npm run prod",
+    "instances": "1",
+    "watch": false,
+    "cwd": "./",
+    "exec_mode": "cluster"
+  }]
+}
