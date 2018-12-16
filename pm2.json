@@ -1,0 +1,10 @@
+{
+  "apps": [{
+    "name": "test-a-map",
+    "script": "./server.js",
+    "instances": "1",
+    "watch": false,
+    "cwd": "./",
+    "exec_mode": "cluster"
+  }]
+}

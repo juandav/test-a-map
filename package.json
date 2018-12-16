@@ -13,6 +13,7 @@
     "d3": "^5.7.0",
     "d3-scale": "^2.1.2",
     "datamaps": "^0.5.9",
+    "express": "^4.16.4",
     "history": "^4.7.2",
     "json-server": "^0.14.0",
     "lodash": "^4.17.11",
@@ -35,15 +36,12 @@
   },
   "scripts": {
     "start": "cross-env PORT=9000 react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env REACT_APP_BACKEND_API=http://138.68.49.145:9001 react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "node server.js",
     "server:watch": "json-server --watch db.json --port 9001",
-    "server:watch-prod": "json-server --watch db.json --port 9001 --host 138.68.49.145",
     "dev": "concurrently \"npm run server:watch\" \"cross-env REACT_APP_BACKEND_API=http://localhost:9001 npm run start\"",
-    "prod": "concurrently \"npm run server:watch-prod\" \"cross-env REACT_APP_BACKEND_API=http://138.68.49.145:9001 npm run start\"",
-    "start:prod": "pm2 start npm --name test_a_map -- run \"npm run prod\""
+    "prod": "npm run build && pm2 --no-daemon start pm2.json"
   },
   "eslintConfig": {
     "extends": "react-app"
