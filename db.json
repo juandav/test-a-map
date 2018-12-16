@@ -74,7 +74,11 @@
   "populations": [
     { "id": 100, "name":"BIAKA", "value":"15%", "locationId": 1 },
     { "id": 101, "name":"other1", "value":"15%", "locationId": 1 },
-    { "id": 102, "name":"other2", "value":"15%", "locationId": 1 } 
+    { "id": 102, "name":"other2", "value":"15%", "locationId": 1 },
+    { "id": 102, "name":"JUDIOS ROMANOS", "value":"15%", "locationId": 3 },
+    { "id": 102, "name":"ASHKENASI", "value":"15%", "locationId": 3 },
+    { "id": 102, "name":"KUWAITI", "value":"15%", "locationId": 4 },
+    { "id": 102, "name":"MAYA", "value":"15%", "locationId": 6 }
   ],
   "group": [
     { "id": 200, "countryId": 7, "populationId": 100 }
