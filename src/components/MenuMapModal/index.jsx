@@ -3,6 +3,7 @@ import MapModalItem from '../MapModalItem'
 import { randomKey } from '../../utils/keys'
 import './styless.css'
 
+/*
 const data = [
   {
     description: "Maya, Yucatan",
@@ -13,6 +14,7 @@ const data = [
     value: "7.5%"
   }
 ]
+*/
 
 function doClick () {
   const colorKey = localStorage.getItem('colorKey')
