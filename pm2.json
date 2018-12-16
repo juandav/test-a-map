@@ -1,7 +1,8 @@
 {
   "apps": [{
     "name": "test_a_map",
-    "script": "npm run prod",
+    "script": "npm",
+    "args": "run start:prod",
     "instances": "1",
     "watch": false,
     "cwd": "./",
