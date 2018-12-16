@@ -43,7 +43,7 @@
     "server:watch-prod": "json-server --watch db.json --port 9001 --host 138.68.49.145",
     "dev": "concurrently \"npm run server:watch\" \"cross-env REACT_APP_BACKEND_API=http://localhost:9001 npm run start\"",
     "prod": "concurrently \"npm run server:watch-prod\" \"cross-env REACT_APP_BACKEND_API=http://138.68.49.145:9001 npm run start\"",
-    "start:prod": "pm2 --no-daemon start pm2.json"
+    "start:prod": "pm2 start npm --name test_a_map -- run \"npm run server:watch-prod\""
   },
   "eslintConfig": {
     "extends": "react-app"
