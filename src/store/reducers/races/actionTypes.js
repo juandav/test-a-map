@@ -1,0 +1,3 @@
+export const FETCH_RACES = 'RACES/FETCH'
+export const FETCH_RACES_FINISHED = 'RACES/FETCH_FINISHED'
+export const ERROR = 'RACES/ERROR'

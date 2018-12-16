@@ -72,9 +72,9 @@
     { "id": 68, "name": "ARGENTINA", "locationId": 6 }
   ],
   "populations": [
-    { "id": 100, "name":"BIAKA" },
-    { "id": 101, "name":"other1" },
-    { "id": 102, "name":"other2" } 
+    { "id": 100, "name":"BIAKA", "value":"15%", "locationId": 1 },
+    { "id": 101, "name":"other1", "value":"15%", "locationId": 1 },
+    { "id": 102, "name":"other2", "value":"15%", "locationId": 1 } 
   ],
   "group": [
     { "id": 200, "countryId": 7, "populationId": 100 }

@@ -30,9 +30,9 @@ function doClick () {
 }
 
 function MenuMapModal (props) {
-  const { country } = props
-  const listItems = data.map((el) =>
-    <MapModalItem key={randomKey()} description={el.description} value={el.value} /> 
+  const { country, races } = props
+  const listItems = races.races.map((el) =>
+    <MapModalItem key={randomKey()} description={el.name} value={el.value} /> 
   )
   return (
     <div className="frontMenu">
