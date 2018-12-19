@@ -1,6 +1,6 @@
-import React, { Component, } from 'react'
-import { connect, } from 'react-redux'
+import React from 'react'
 import PropTypes from 'prop-types'
+import { Field, reduxForm } from 'redux-form'
 import { withStyles, } from '@material-ui/core/styles'
 import Card from '@material-ui/core/Card'
 import CardActions from '@material-ui/core/CardActions'
@@ -8,39 +8,8 @@ import CardContent from '@material-ui/core/CardContent'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import TextField from '@material-ui/core/TextField'
-import { login, } from '../../store/reducers/auth/actions'
-import { Redirect, } from 'react-router-dom'
-
-class LoginPageContainer extends Component {
-  doClick = () => {
-    this.props.login({ 
-      username:'admin', 
-      password: 'admin' 
-    })
-  }
-  componentDidUpdate () {
-    const { auth } = this.props
-    if (auth.error) {
-      alert('creds invalidas')
-    }
-  }
-  render () {
-    const { auth } = this.props
-
-    if (auth.isLoggedIn) {
-      return (
-        <Redirect to={'/Dashboard'}/>
-      )
-    }
-
-    return React.Children.map(this.props.children, (child) => {
-      return React.cloneElement(child, {
-        ...this.props,
-        doClick: this.doClick
-      })
-    })
-  }
-}
+import LoginContainer from '../../containers/LoginContainer'
+import { validate, asyncValidate } from '../../utils/form'
 
 const styles = {
   card: {
@@ -64,51 +33,92 @@ const styles = {
   }
 }
 
-const Form = ({ doClick, classes }) => (
-  <Card className={classes.card}>
-    <CardContent>
-      <Typography className={classes.title} color="textSecondary" gutterBottom>
-        Login
-      </Typography>
-      <TextField
-        id="username"
-        rows={1}
-        label="Username"
-        defaultValue="admin"
-        margin="normal"
-      />
-      <TextField
-        id="password"
-        rows={1}
-        label="Password"
-        type="password"
-        autoComplete="current-password"
-        margin="normal"
-      />
-    </CardContent>
-    <CardActions>
-      <Button size="small" onClick={() => doClick()}>Login</Button>
-    </CardActions>
-  </Card>
+const renderTextField = ({
+  label,
+  input,
+  meta: { touched, invalid, error },
+  ...custom
+}) => (
+  <TextField
+    label={label}
+    placeholder={label}
+    error={touched && invalid}
+    helperText={touched && error}
+    {...input}
+    {...custom}
+  />
 )
 
+const renderPasswordField = ({
+  label,
+  input,
+  meta: { touched, invalid, error },
+  ...custom
+}) => (
+  <TextField
+    label={label}
+    placeholder={label}
+    error={touched && invalid}
+    helperText={touched && error}
+    {...input}
+    {...custom}
+    type="password"
+    autoComplete="current-password"
+  />
+)
 
-const LoginStateContainer = connect( ({ auth }) => {
-  return { auth }
-}, (dispath) => {
-  return {
-    login: payload => dispath(login(payload))
-  }
-})(LoginPageContainer)
+const Form = props => {
+  const { handleSubmit, pristine, reset, submitting } = props
+  return (
+    <form onSubmit={handleSubmit}>
+      <CardContent>
+        <Field name="email" component={renderTextField} label="Email" />
+        <Field name="password" component={renderPasswordField} label="Password" />
+      </CardContent>
+      <CardActions>
+        <Button
+          type="submit"
+          fullWidth
+          color="primary"
+          onClick={reset}
+          disabled={pristine || submitting}
+          >
+          Clear
+        </Button>
+        <Button
+          type="submit"
+          fullWidth
+          color="primary"
+          disabled={pristine || submitting}
+        >
+          Login
+        </Button>
+      </CardActions>
+    </form>
+  )
+}
+
+const ReduxForm = reduxForm({
+  form: 'Form',
+  validate,
+  asyncValidate,
+})(Form)
+
+const LoginForm = props =>  <ReduxForm onSubmit={props.login} />
 
 function LoginUIPage (props) {
   const { classes } = props
   return (
     <div className={classes.layout}>
       <div className={classes.centeredCardContainer}>
-        <LoginStateContainer {...props} >
-          <Form />
-        </LoginStateContainer>
+        <Card className={classes.card}>
+            <Typography className={classes.title} align="center" color="textSecondary" gutterBottom>
+              Login
+            </Typography>
+            <LoginContainer {...props} >
+              <LoginForm />
+            </LoginContainer>
+        </Card>
       </div>
     </div>
   )
