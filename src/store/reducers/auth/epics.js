@@ -22,4 +22,4 @@ const fetchUserEpic = action$ => action$.pipe(
   )
 )
 
-export const loginEpics = combineEpics(fetchUserEpic)
+export const authEpics = combineEpics(fetchUserEpic)

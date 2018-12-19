@@ -84,6 +84,7 @@
     { "id": 200, "countryId": 7, "populationId": 100 }
   ],
   "auth": [
-    { "id": 10001, "username": "admin", "password": "admin" }
+    { "id": 10001, "username": "nicolas.poveda@arepa.co", "password": "admin", "name": "Nicolas Poveda" },
+    { "id": 10001, "username": "e.juandav@gmail.com", "password": "admin", "name": "Juan David" }
   ]
 }

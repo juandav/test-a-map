@@ -92,6 +92,14 @@ class Map extends Component {
             '<br>Count: <strong>', data.numberOfThings, '</strong>',
             '</div>'].join('');
         }
+      },
+      done: function(datamap){
+       console.log(this)
+       
+        /*datamap.svg.call(d3.behavior.zoom().on("zoom", redraw));
+        function redraw() {
+            datamap.svg.selectAll("g").attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+        }*/
       }
     })
   }

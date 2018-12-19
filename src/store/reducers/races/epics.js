@@ -22,4 +22,4 @@ const fetchRacesEpics = action$ => action$.pipe(
   )
 )
 
-export const fetchRacesEpic = combineEpics(fetchRacesEpics)
+export const racesEpics = combineEpics(fetchRacesEpics)
